@@ -15,9 +15,16 @@ namespace ConsoleApp1
         {
 
             string testePrimitivo = string.Empty;
-            String outroTestePrimitivo = string.Empty;
-            bool testeComp = "123" == "123";
-            Boolean testComp = "123" == "123";
+            String outroTestePrimitivo;
+            bool testeComp;
+            Boolean testComp;
+
+            //O "?" permique que os valores que forem para ele sejam nulo - VALOR ANULAVEL 
+
+            bool? testeNoolNull;
+
+            int numeroInteiro = 999;
+            long numeroInteiroLongo = 646547;
 
 
 
