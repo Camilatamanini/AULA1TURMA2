@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceBanana", "ReplaceBanana\ReplaceBanana.csproj", "{D2E72FB7-5D79-41E9-BAB7-602758B6F297}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2E72FB7-5D79-41E9-BAB7-602758B6F297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2E72FB7-5D79-41E9-BAB7-602758B6F297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2E72FB7-5D79-41E9-BAB7-602758B6F297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2E72FB7-5D79-41E9-BAB7-602758B6F297}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {190323A4-5B8F-46D3-9607-F41754D7E4ED}
+	EndGlobalSection
+EndGlobal
