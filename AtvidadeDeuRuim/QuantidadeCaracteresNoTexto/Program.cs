@@ -10,6 +10,12 @@ namespace QuantidadeCaracteresNoTexto
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Insira o texto abaixo");
+            var textoLength = Console.ReadLine();
+
+            Console.WriteLine($"O número de caracteres deste texto é: {textoLength.Replace(" ", " ").Length}");
+
+            Console.ReadKey();
         }
     }
 }
