@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using MinhaBiblioteca;
 
@@ -18,7 +19,9 @@ namespace AcessandoInformacoes
             Console.WriteLine("Escolha uma das opções do menu");
             Console.WriteLine("1 - Cálculo de área");
             Console.WriteLine("2 - Animação");
-            Console.WriteLine("3 - Sair do sistema");
+            Console.WriteLine("3 - Cervejas Ambev");
+            Console.WriteLine("4 - Carangos");
+            Console.WriteLine("5 - Sair do sistema");
 
             var menuEscolhido = int.Parse(Console.ReadLine());
 
@@ -40,11 +43,22 @@ namespace AcessandoInformacoes
 
                 case 3:
                     {
-                        Console.WriteLine("Saindo...");
+                        ListaAmbev.ListaCerveja();
+                        MenuSistema();
+                    }
+                    break;
+                case 4:
+                    {
+                        ListaCarangos.ListaCarros();
+                        MenuSistema();
+                    }
+                    break;
+                case 5:
+                    {
+                        Console.WriteLine("Escrevi e sai correndo....");
+                        Thread.Sleep(500);
                         return;
                     }
-
-
                 default:
                     break;
 
