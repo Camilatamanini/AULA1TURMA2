@@ -8,7 +8,7 @@ namespace Atividades17._09ListaCarros
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             ListaCarros();
         }
