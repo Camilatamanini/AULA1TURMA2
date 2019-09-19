@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaClasseDeCadastros", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaClasseDeCarros", "MinhaClasseDeCarros\MinhaClasseDeCarros.csproj", "{5FC89821-CD45-44AA-A093-1ED440815BE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssuntosNovos", "AssuntosNovos\AssuntosNovos.csproj", "{07AC7191-C9BD-4F24-BCAF-4CD25070F846}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5FC89821-CD45-44AA-A093-1ED440815BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FC89821-CD45-44AA-A093-1ED440815BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FC89821-CD45-44AA-A093-1ED440815BE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07AC7191-C9BD-4F24-BCAF-4CD25070F846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07AC7191-C9BD-4F24-BCAF-4CD25070F846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07AC7191-C9BD-4F24-BCAF-4CD25070F846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07AC7191-C9BD-4F24-BCAF-4CD25070F846}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
