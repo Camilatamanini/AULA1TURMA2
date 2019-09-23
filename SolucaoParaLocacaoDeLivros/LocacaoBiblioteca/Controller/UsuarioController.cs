@@ -15,17 +15,23 @@ namespace LocacaoBiblioteca.Controller
     /// </summary>
     public class UsuarioController
     {
+        /// <summary>
+        /// Criando privado para impedir o programador adc um ID ou alterar fora da classe
+        /// </summary>
+        private int IdContador = 0;
         public UsuarioController()
         {
             ListaDeUsuarios = new List<Usuario>();
 
             ListaDeUsuarios.Add(new Model.Usuario()
             {
+                Id = IdContador++,
                 Login = "admin",
                 Senha = "admin"
             });
             ListaDeUsuarios.Add(new Model.Usuario()
             {
+                Id = IdContador++,
                 Login = "cami",
                 Senha = "cami"
             });
@@ -45,10 +51,39 @@ namespace LocacaoBiblioteca.Controller
         /// <returns>Retorna verdadeiro quando existir o usuário com este login e senha</returns>
         public bool LoginSistema(Usuario usuarios)
         {
-            return ListaDeUsuarios.Exists(x => x.Login == usuarios.Login && x.Senha == usuarios.Senha);
+            return RetornaListaDeUsuarios().Exists(x => x.Login == usuarios.Login && x.Senha == usuarios.Senha);
 
         }
-        public List<Usuario> ListaDeUsuarios { get; set; }
-
+        private List<Usuario> ListaDeUsuarios { get; set; }
+        /// <summary>
+        /// Metodo usado para adicionar um novo usuario no sistema
+        /// </summary>
+        /// <param name="usuario">Novo usuario que sera adicinado a lista</param>
+        public void AdicionarUsuario(Usuario usuario)
+        {
+            usuario.Id = IdContador++;
+            //Adicionamos o usuário em nossa lista
+            ListaDeUsuarios.Add(usuario);
+        }
+        /// <summary>
+        /// Metodo que retorna nossa lista interna de usuários ativos
+        /// </summary>
+        /// <returns>Lista contendo usuários</returns>
+        public List <Usuario> RetornaListaDeUsuarios()
+        {
+            //Retorna agora somente lista de usuários ativos com a expressão "Where(x=>x.Ativo)"
+            return ListaDeUsuarios.Where(x=>x.Ativo).ToList<Usuario>();
+        }
+        /// <summary>
+        /// Metodo que desativa um registro de usuário cadastrado em nossa lista 
+        /// </summary>
+        /// <param name="identificadoID">Parametro que identifica o usuario que será desativado</param>
+        public void RemoverUsuarioPorId(int identificadoID)
+        {
+            //Aqui usamos o metodo FirstOrDefault para localizar nosso usuario dentro da lista 
+            //com isso conseguimos acessar as propriedades dele e desativar o registro 
+            ListaDeUsuarios.FirstOrDefault(x => x.Id == identificadoID).Ativo = false;
+        }
     }
+
 }
