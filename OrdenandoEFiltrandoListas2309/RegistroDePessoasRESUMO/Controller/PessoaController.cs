@@ -202,5 +202,49 @@ namespace RegistroDePessoasRESUMO.Controller
             //No GET podemos retornar propriedade privada e calculo de metodos quando necessario
             get { return listaDePessoas; }
         }
+        /// <summary>
+        /// Método que retorna nossa lista de pessoas ordenada de forma asc pelo nome de cada uma
+        /// </summary>
+        /// <returns>Retornamos o valor já ordenado de nossa lista</returns>
+        public List<Pessoas> GetPessoasOrdenadaAsce()
+        {
+            return listaDePessoas.OrderBy(x => x.Nome)
+                .ToList<Pessoas>();
+        }
+        /// <summary>
+        /// Método público que retorna a lista orenada pela data de nascimento da maior data para a menor data
+        /// </summary>
+        /// <returns>Lista ordenada</returns>
+        public List<Pessoas> GetPessoasOrdenadaDescPelaDataNascimento()
+        {
+            return listaDePessoas.OrderByDescending(x => x.DataNascimento.ToLongDateString())
+                .ToList<Pessoas>();
+        }
+        /// <summary>
+        /// Metodo que retorna as pessoas com determinado valor dentro da carteira
+        /// </summary>
+        /// <param name="valor">Valor informado para o filtro</param>
+        /// <returns></returns>
+        public List<Pessoas> GetPessoasComMaisPilaNaCarteira(
+            //Em caso de não informams o valor, ele fica 500 se ele não passar o valor informado pelo programador
+            double valor = 500)
+        {
+            return listaDePessoas
+                //Realizamos o filtro de busca
+                .FindAll(x => x.Carteira > valor)
+                //Ordenamos as informações
+                //Convertemos para uma lista do tipo pessoa
+                .ToList<Pessoas>();
+        }
+        public List<Pessoas>GetPessoasComIdantidadeMaiorA(int idade = 18)
+        {
+            return listaDePessoas
+                .FindAll(x => (DateTime.Now.Year - x.DataNascimento.Year) >= idade);
+        }
+        public List<Pessoas> GetPessoasComIdadeMenorQue(int idade =16)
+        {
+            return listaDePessoas
+                .FindAll(x => (DateTime.Now.Year - x.DataNascimento.Year) < idade);
+        }
     }
 }
