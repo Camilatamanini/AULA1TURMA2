@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RegistroDePessoasRESUMO
+namespace RegistroDePessoasRESUMO.Model
 {
-    class Pessoas
+    public class Pessoas
     {
         public string Nome { set; get; }
         public int Id { set; get; }
@@ -14,3 +14,4 @@ namespace RegistroDePessoasRESUMO
         public double Carteira { set; get; }
     }
 }
+
