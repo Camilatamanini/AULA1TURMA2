@@ -15,27 +15,14 @@ namespace LocacaoBiblioteca.Controller
     /// </summary>
     public class UsuarioController
     {
+        private LocacaoContext contextDB = new LocacaoContext();
         /// <summary>
         /// Criando privado para impedir o programador adc um ID ou alterar fora da classe
         /// </summary>
-        private int IdContador = 0;
+
         public UsuarioController()
         {
-            ListaDeUsuarios = new List<Usuario>();
-
-            ListaDeUsuarios.Add(new Model.Usuario()
-            {
-                Id = IdContador++,
-                Login = "admin",
-                Senha = "admin"
-            });
-            ListaDeUsuarios.Add(new Model.Usuario()
-            {
-                Id = IdContador++,
-                Login = "cami",
-                Senha = "cami"
-            });
-
+            
         }
 
         /// <summary>
@@ -51,19 +38,15 @@ namespace LocacaoBiblioteca.Controller
         /// <returns>Retorna verdadeiro quando existir o usuário com este login e senha</returns>
         public bool LoginSistema(Usuario usuarios)
         {
+            //Metodo que já está validade por ativo ou inativo
             return RetornaListaDeUsuarios().Exists(x => x.Login == usuarios.Login && x.Senha == usuarios.Senha);
-
         }
-        private List<Usuario> ListaDeUsuarios { get; set; }
-        /// <summary>
-        /// Metodo usado para adicionar um novo usuario no sistema
-        /// </summary>
-        /// <param name="usuario">Novo usuario que sera adicinado a lista</param>
+        
         public void AdicionarUsuario(Usuario usuario)
         {
-            usuario.Id = IdContador++;
+            usuario.Id = contextDB.IdContadorUsuario++;
             //Adicionamos o usuário em nossa lista
-            ListaDeUsuarios.Add(usuario);
+            contextDB.ListaDeUsuarios.Add(usuario);
         }
         /// <summary>
         /// Metodo que retorna nossa lista interna de usuários ativos
@@ -72,7 +55,7 @@ namespace LocacaoBiblioteca.Controller
         public List <Usuario> RetornaListaDeUsuarios()
         {
             //Retorna agora somente lista de usuários ativos com a expressão "Where(x=>x.Ativo)"
-            return ListaDeUsuarios.Where(x=>x.Ativo).ToList<Usuario>();
+            return contextDB.ListaDeUsuarios.Where(x=>x.Ativo).ToList<Usuario>();
         }
         /// <summary>
         /// Metodo que desativa um registro de usuário cadastrado em nossa lista 
@@ -82,8 +65,9 @@ namespace LocacaoBiblioteca.Controller
         {
             //Aqui usamos o metodo FirstOrDefault para localizar nosso usuario dentro da lista 
             //com isso conseguimos acessar as propriedades dele e desativar o registro 
-            ListaDeUsuarios.FirstOrDefault(x => x.Id == identificadoID).Ativo = false;
+            contextDB.ListaDeUsuarios.FirstOrDefault(x => x.Id == identificadoID).Ativo = false;
         }
+        
     }
 
 }

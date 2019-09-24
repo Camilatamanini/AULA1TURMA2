@@ -10,7 +10,7 @@ namespace LocacaoBiblioteca.Model
     {
         public int Id { get; set; }
         public string Nome { set; get; }
-        public bool Ativo { set; get; }
+        public bool Ativo { set; get; } = true;
         public int UsuarioCriacao { set; get; }
         public int UsuarioAlteracao { set; get; }
         public DateTime DataCriacao { get; set; }
