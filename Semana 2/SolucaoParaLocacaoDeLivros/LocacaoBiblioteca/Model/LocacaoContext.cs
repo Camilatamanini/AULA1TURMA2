@@ -56,7 +56,5 @@ namespace LocacaoBiblioteca.Model
         }
              public List<Livro> ListaDeLivros { get; set; }
              public List<Usuario> ListaDeUsuarios { get; set; }
-
-
     }
 }
