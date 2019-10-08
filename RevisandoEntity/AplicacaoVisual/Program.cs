@@ -9,7 +9,7 @@ using RevisaoEntity.Controller;
 
 namespace AplicacaoVisual
 {
-    class Program
+    public class Program
     {
         //1 - Setar a aplicação visual para startar o projeto
         //2 - Vamos add EntityFraeWork ao nosso projeto

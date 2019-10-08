@@ -18,7 +18,6 @@ namespace RevisaoEntity.Controller
                 contextDB.Cervejas.Add(item);
                 contextDB.SaveChanges();
             }
-            contextDB.SaveChanges();
         }
 
         public IQueryable<Cerveja> GetCervejas()
