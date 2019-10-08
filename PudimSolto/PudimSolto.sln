@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFisrtTest", "CodeFisrtTest\CodeFisrtTest.csproj", "{778C329F-4544-4D34-8C09-58D0AE5B68BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GambCodeFirst", "GambCodeFirst\GambCodeFirst.csproj", "{75563653-BCD7-4424-A2A5-9D04A1BEA455}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{778C329F-4544-4D34-8C09-58D0AE5B68BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{778C329F-4544-4D34-8C09-58D0AE5B68BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{778C329F-4544-4D34-8C09-58D0AE5B68BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{778C329F-4544-4D34-8C09-58D0AE5B68BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75563653-BCD7-4424-A2A5-9D04A1BEA455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75563653-BCD7-4424-A2A5-9D04A1BEA455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75563653-BCD7-4424-A2A5-9D04A1BEA455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75563653-BCD7-4424-A2A5-9D04A1BEA455}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
