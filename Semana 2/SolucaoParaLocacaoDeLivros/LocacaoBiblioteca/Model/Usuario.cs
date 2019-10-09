@@ -1,21 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace LocacaoBiblioteca.Model
 {
-    public class Usuario
+    public class Usuario : ControleDB
     {
+        [Key]
         public int Id { get; set; }
+        [MaxLength(30)]
+        [Required]
         public string Login { set; get; }
+        [MaxLength(30)]
+        [Required]
         public string Senha{set ; get; }
-        public bool Ativo { set; get; } = true;
-        public int UsuarioCriacao { set; get; }
-        public int UsuarioAlteracao { set; get; }
-        public DateTime DataCriacao { get; set; }
-        public DateTime DataAlteracao { set; get; }
+        [MaxLength(50)]
         public string Nome { get; set; }
     }
 }

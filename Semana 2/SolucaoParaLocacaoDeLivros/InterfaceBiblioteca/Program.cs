@@ -120,19 +120,25 @@ namespace InterfaceBiblioteca
         private static void RemoverLivroPeloId()
         {
             Console.WriteLine("Remover um livro pela ID no sistema.");
-            //Metodo que mostra os livros adivionados anteriormente
-            //o usuario informa o ID correto para desativar
-            MostrarLivro();
+            livrosController.GetLivros()
+              .ToList<Livro>()
+              .ForEach
+              (x => Console.WriteLine(
+                  $"Id: {x.Id} - Nome: {x.Nome}."));
 
-            Console.WriteLine("Informe o ID para desativar do sistema:");
-            var livroID = int.Parse(Console.ReadLine());
+            //Informamos ao usuário que ele precisa colocar o id para realizar alteração
+            Console.WriteLine("Informe o Id para alteração de registro:");
+            //Obtemos o Id informado
+            var celularId = int.Parse(Console.ReadLine());
 
-            //Aqui chamamos RemoverUsuarioPorID da nossa classe que controla os usuários do sistema
-            livrosController.RemoverLivroPorId(livroID);
+            //Método que 'remove' o celular de nosso sistema
+            ////var resultado = livrosController.RemoverLivroPorId (); ////////////////// parei aqui
 
-            //Informamos que o usuario foi desativado
-            Console.WriteLine("Livro desativado.");
-            Console.ReadKey();
+
+           /// if (resultado)//Apresentação do resultado da operação
+             //   Console.WriteLine("Celular Removido Com Sucesso!");
+          ///  else
+             //   Console.WriteLine("Erro ao Remover Aparelho");
         }
         /// <summary>
         /// Metodo que adiciona dentro de nossa lista um novo registro de livro

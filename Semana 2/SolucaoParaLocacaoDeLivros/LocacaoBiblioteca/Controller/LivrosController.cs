@@ -9,36 +9,36 @@ namespace LocacaoBiblioteca.Controller
 {
     public class LivrosController
     {
-        private LocacaoContext contextDB = new LocacaoContext();
-        public LivrosController()
+        LocacaoContext contextDB = new LocacaoContext();
+        public IQueryable<Livro> GetLivros()
         {
-            
+            return contextDB                       //Acesso ao banco de dados
+                .ListaDeLivros                     //Nossa tabela de banco de dados
+                .Where(x => x.Ativo == true);      // As condições do filtro
+        }
 
-        }
-        /// <summary>
-        /// Método que adiciona livros em nossa lista já "instanciada" criada dentro do construtor
-        /// </summary>
-        
-        public void AdicionarLivro(Livro parametroLivro)
+        public bool AdicionarLivro(Livro parametroLivro)
         {
-            parametroLivro.Id = contextDB.IdContadorLivros++;
-            //Adicionamos o livro em nossa lista
-            contextDB.ListaDeLivros.Add(parametroLivro);
-        }
-        public List<Livro> RetornaListaDeLivros()
-        {
-            return contextDB.ListaDeLivros.Where(x => x.Ativo).ToList<Livro>();
-        }
-        /// <summary>
-        /// Metodo para desativar o registro de livros pela ID
-        /// </summary>
-        /// <param name="identificandoId">ID do livro que vamos desativar</param>
-        public void RemoverLivroPorId(int identificandoId)
-        {
-            var livro = contextDB.ListaDeLivros.FirstOrDefault(x => x.Id == identificandoId);
+            if (string                      //Nosso tipo que contem vários metodos prontos para string
+                .IsNullOrWhiteSpace         //Método que identifica espaços em branco ou Valor null -- "IsNullOrWhiteSpace" verifica/impede cadastros em espaços totalmente brancos
+                (parametroLivro.Nome))       //Campo que vamos validar
+                return false;
+                   
+            contextDB.ListaDeLivros.Add(parametroLivro);          
+            contextDB.SaveChanges();                
 
-            if (livro != null)
-                livro.Ativo = false;
+            return true;
         }
-    }
-}
+        public bool RemoverLivroPorId(int id)
+        {
+            var livro = contextDB.ListaDeLivros.FirstOrDefault(x => x.Id == id);
+
+            if (livro == null)
+                return false;
+            livro.Ativo = false;
+
+            contextDB.SaveChanges();
+            return true;
+        }                              
+    }                                 
+}                 

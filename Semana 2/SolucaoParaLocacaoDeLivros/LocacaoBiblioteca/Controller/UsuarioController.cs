@@ -42,9 +42,9 @@ namespace LocacaoBiblioteca.Controller
             return RetornaListaDeUsuarios().Exists(x => x.Login == usuarios.Login && x.Senha == usuarios.Senha);
         }
         
-        public void AdicionarUsuario(Usuario usuario)
+        public void AdicionarUsuario(Usuario usuario, int id)
         {
-            usuario.Id = contextDB.IdContadorUsuario++;
+            usuario.Id = contextDB.id
             //Adicionamos o usuário em nossa lista
             contextDB.ListaDeUsuarios.Add(usuario);
         }
