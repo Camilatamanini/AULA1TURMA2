@@ -9,7 +9,6 @@ namespace CatalagoCelulares.Controller
 {
     //1 - Usar nossa pasta model
     //2 - Criar uma instância nova da nossa Context
-    //3 -
     public class CelularesController
     {
         NewCelularesContextDB contextDB = new NewCelularesContextDB();

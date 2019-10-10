@@ -6,13 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LocacaoBiblioteca.Controller
-
 {
-    
-    
     /// <summary>
     ///  Classe que contem os métodos de usuários do sistema
-    /// </summary>
+    /// </summary>s
     public class UsuarioController
     {
         private LocacaoContext contextDB = new LocacaoContext();
@@ -42,11 +39,11 @@ namespace LocacaoBiblioteca.Controller
             return RetornaListaDeUsuarios().Exists(x => x.Login == usuarios.Login && x.Senha == usuarios.Senha);
         }
         
-        public void AdicionarUsuario(Usuario usuario, int id)
+        public void AdicionarUsuario(Usuario usuario)
         {
-            usuario.Id = contextDB.id
             //Adicionamos o usuário em nossa lista
             contextDB.ListaDeUsuarios.Add(usuario);
+            contextDB.SaveChanges();
         }
         /// <summary>
         /// Metodo que retorna nossa lista interna de usuários ativos
