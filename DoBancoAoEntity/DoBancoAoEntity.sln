@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoBancoAoEntity", "DoBancoAoEntity\DoBancoAoEntity.csproj", "{7569593F-4429-433E-BC69-B1D43E61D0DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceVendas", "InterfaceVendas\InterfaceVendas.csproj", "{24125533-C54F-4CE0-BB25-AAB3CAD4BD60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7569593F-4429-433E-BC69-B1D43E61D0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7569593F-4429-433E-BC69-B1D43E61D0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7569593F-4429-433E-BC69-B1D43E61D0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7569593F-4429-433E-BC69-B1D43E61D0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24125533-C54F-4CE0-BB25-AAB3CAD4BD60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24125533-C54F-4CE0-BB25-AAB3CAD4BD60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24125533-C54F-4CE0-BB25-AAB3CAD4BD60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24125533-C54F-4CE0-BB25-AAB3CAD4BD60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB063349-7CBB-47AD-B7B0-C7FFC19E7829}
+	EndGlobalSection
+EndGlobal
