@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SistemaLogin", "SistemaLogin", "{270D217E-AB70-456F-9AE2-6D0FE0587D50}"
+	ProjectSection(SolutionItems) = preProject
+		InterfaceLogin.html = InterfaceLogin.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CCB7C47-3313-484F-8DE3-D04FF5104B52}
+	EndGlobalSection
+EndGlobal

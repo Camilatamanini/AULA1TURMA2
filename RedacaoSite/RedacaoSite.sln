@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Redacao", "Redacao", "{B7CB0A22-E3DC-44FE-B863-2729639F1D51}"
+	ProjectSection(SolutionItems) = preProject
+		SiteDeRedacao.html = SiteDeRedacao.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4E41E1D-8A89-4EF8-83E6-87B42822A654}
+	EndGlobalSection
+EndGlobal
