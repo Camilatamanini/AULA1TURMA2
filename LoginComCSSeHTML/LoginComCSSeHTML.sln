@@ -8,6 +8,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SistemaLogin", "SistemaLogi
 		InterfaceLogin.html = InterfaceLogin.html
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SistemaCadastro", "SistemaCadastro", "{582A032A-C2F9-4ECD-B336-BC5BF7181C44}"
+	ProjectSection(SolutionItems) = preProject
+		InterfaceCadastro.html = InterfaceCadastro.html
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
