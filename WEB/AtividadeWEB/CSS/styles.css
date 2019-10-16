@@ -1,0 +1,12 @@
+body {
+    background-image: url('https://data.whicdn.com/images/262142392/original.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.marginClass {
+    margin-top: 20%;
+    background-color: #4a858ddb;
+}
+.corClass {
+    background-color: #00edff33;
+}
