@@ -1,156 +1,536 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+
 <head>
-    <title>..::Conversor de moeda::..</title>
-    <script type="text/javascript" src="jquery.js"></script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript" src="scrolltopcontrol.js">
+    </script>
+    <script type="text/javascript" src="http://static.tumblr.com/2plu7ye/jt0mgeac5/top.txt"></script>
 
-    <title> Primeiro Web Site</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+
+    <title>{Title}</title>
+
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+    <meta name="color:Header border" content="#000000" />
+    <meta name="color:Header" content="#000000" />
+    <meta name="color:Text" content="#000000" />
+    <meta name="color:Description" content="#ffffff" />
+    <meta name="color:Navigation" content="#ffffff" />
+    <meta name="color:Navigation hover" content="#000000" />
+    <meta name="color:Navigation bg hover" content="#ffffff" />
+    <meta name="color:Links" content="#000000" />
+    <meta name="color:Hover" content="#aaaaaa" />
+    <meta name="color:Question background" content="#dddddd" />
+    <meta name="color:Blogtitle" content="#ffffff" />
+    <meta name="color:Scrollbar" content="#000000" />
+    <meta name="color:Background" content="#ffffff" />
+    <meta name="image:Background" content="">
+    <meta name="image:Header" content="0">
+    <meta name="if:Rounded photos" content="0" />
+    <meta name="if:Border" content="0" />
+    <meta name="if:Faded images" content="0" />
+    <meta name="if:Rainbow links" content="0" />
+    <meta name="if:Tiny cursor" content="1" />
+    <meta name="if:White permalink background" content="0" />
+    <meta name="text:Link 1 Title" content="" />
+    <meta name="text:Link 1 URL" content="" />
+    <meta name="text:Link 2 Title" content="" />
+    <meta name="text:Link 2 URL" content="" />
+    <meta name="text:Link 3 Title" content="" />
+    <meta name="text:Link 3 URL" content="" />
+    <meta name="text:Link 4 Title" content="" />
+    <meta name="text:Link 4 URL" content="" />
+    <meta name="text:Link 5 Title" content="" />
+    <meta name="text:Link 5 URL" content="" />
+
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,800italic,400,600,700,800&v2" rel='stylesheet' type='text/css'>
+    <style type="text/css">
+{block:iftinycursor}body, a:hover {cursor: url(http://i.imgur.com/ZOrzC.png), progress !important;} a:hover {cursor: url(http://cur.cursors-4u.net/others/oth-6/oth589.cur), progress !important;}{/block:iftinycursor}
+
+
+::-webkit-scrollbar {width: 6px; height: 4px; background: {color:Background}; }
+::-webkit-scrollbar-thumb { background-color: {color:scrollbar};}{/block:iftinyscrollbar}
+
+
+@font-face { font-family: "loversquarrel-regular"; src: url('http://static.tumblr.com/xgp678o/bgZm6go4x/loversquarrel-regular.ttf'); }
+
+iframe#tumblr_controls {
+top: 0% !important;
+right:0% !important;
+position: absolute !important;
+-webkit-filter: invert(100%) ;}
+
+body {
+margin:auto;
+color:{color:text};
+width:920px;
+font-family:Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+font-size: 10px;
+background-color:{color:background};
+background-attachment: fixed;
+background-repeat: repeat;
+background-image:url('{image:Background}');
+line-height:12px;}
+
+a {color: {color:Links};text-decoration: none;}a:hover {color: {color:Hover};-webkit-transition-duration: .5s;}
+
+.caption {margin-top:5px; margin-bottom:10px;}
+
+iframe#ask_form {width:540px!important;}
+
+.content {
+margin-left:-219px;
+padding-top:4px;
+width:{block:indexpage}1350px{/block:indexpage}
+{block:permalinkpage}500px{/block:permalinkpage}; }
+
+
+.post{
+{block:indexpage}
+width:260px;
+margin-top:8px;
+margin-left:10px;
+font-size:10px;
+line-height:12px;
+font-color:{color:text};
+{block:iffadedimages}opacity:0.8;{/block:iffadedimages}
+{/block:indexpage}
+{block:permalinkpage}
+margin-left:57px;
+width:500px;
+margin-top:18px;
+{/block:permalinkpage}
+float:left;
+position:relative; }
+
+.post:hover{{block:iffadedimages}opacity:1;-webkit-transition: all 0.3s ease-out;
+-moz-transition: all 0.3s ease-out;transition: all 0.3s ease-out;{/block:iffadedimages}}
+
+.post img {{block:indexpage}width:260px; {block:ifroundedphotos}border-radius:5px;{/block:ifroundedphotos};{/block:indexpage}}
+
+.question {
+padding: 10px 15px;
+background-color: {color:question background};
+margin-bottom: 10px;
+position: relative;
+font-size: 12px;
+line-height: 175%;
+color: {color:text};
+border-radius:5px;
+font-family: 'Open Sans';
+font-style:italic;
+
+}
+
+.question::after {
+border-radius:5px;
+content: '';
+position: absolute;
+top: 100%;
+left: 10px;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-top: 5px solid {color:question background};
+width: 0;}
+
+.asker_line {
+margin-left: 10px;
+font-weight:bold;
+font-family: 'Open Sans';
+font-size: 12px;
+}
+
+.post .kkk{
+position:absolute;
+width:240px;
+padding-top:7px;
+padding-left:10px;
+padding-right:10px;
+background-color:#000000;
+{block:ifwhitepermalinkbackground}background-color:#ffffff;{/block:ifwhitepermalinkbackground}
+overflow:hidden;
+opacity:0.0;
+right:0px;
+bottom:0px;
+padding-bottom:6px;
+z-index:1;
+text-align:center;
+text-transform:uppercase;
+line-height:10px;
+font-size:9px;
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+}
+
+.post:hover .kkk{
+overflow:visible;
+-webkit-transition: opacity 0.5s linear; opacity: 0.8;
+transition: all 0.5s linear;
+right:0px;
+bottom:2px;
+height: 3px;
+padding-bottom:10px;
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+}
+
+.post .kkk a{
+color:#fff;
+{block:ifwhitepermalinkbackground}color:#000;{/block:ifwhitepermalinkbackground}
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+}
+
+.post .kkk a:hover{
+color:{color:hover};
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+}
+
+
+.permalink {
+margin:0px;
+text-align:right;
+padding:0px;
+opacity:0;
+-moz-transition: all 0.3s ease-out;
+-o-transition: all 0.3s ease-out;
+-webkit-transition: all 0.3s ease-out;
+transition: all 0.3s ease-out;
+}
+
+.permalink a:hover{
+color:{color:Hover}
+}
+
+
+.post:hover #text{opacity:1;-webkit-transition: all 0.4s ease-out;-moz-transition: all 0.4s ease-out;transition: all 0.4s ease-out;}
+
+
+
+.post #text{
+text-align:right;
+font-family:helvetica;
+opacity:0;
+font-weight:bold;
+font-size:10px;
+-webkit-transition: all 0.3s ease-out;
+-moz-transition: all 0.3s ease-out;transition: all 0.3s ease-out;
+}
+
+.post #text:hover{
+text-align:right;
+font-family:helvetica;
+opacity:1;
+font-weight:bold;
+font-size:10px;
+-webkit-transition: all 0.3s ease-out;
+-moz-transition: all 0.3s ease-out;transition: all 0.3s ease-out;
+}
+
+
+#zzz{margin-top:10px;font-size:10px;text-align:left;padding-left:60px;}
+
+.head {margin-left:-230px;width: 1330px;{block:ifborder}border-bottom:2px solid {color:Header border};{/block:ifborder};padding:20px;margin-top:0px;background:{color:header};}
+
+@font-face{font-family:wisdom_script; src:url('http://static.tumblr.com/t98gn37/uVtmgagq4/wisdom_script.otf');}
+
+.blogtitle {
+text-align:center;
+color:{color:Blogtitle};
+font-family: wisdom_script;
+padding-bottom:8px;
+font-size:50px;
+line-height:50px;}
+
+@font-face {font-family:'marketingscript';
+src: url('http://static.tumblr.com/ejm8w78/JDllviajb/marketingscript.ttf');
+}
+
+.desc {margin-left:255px;width:60%;text-align:center;line-height: 13px;padding-top:7px;font-size:11px;color:{color:description}}
+
+.links {font-size:11px; color:{color:navigation};font-family:century gothic;letter-spacing:1px;text-align:center;padding-bottom:3px;font-weight:bold;padding:2px;text-transform:uppercase;padding-right:3px;padding-left:3px;-webkit-transition: all 0.4s linear;
+-moz-transition: all 0.4s linear;
+transition: all 0.4s linear;}
+
+.links:hover {font-size:11px;color:{color:navigation hover}; text-align:center;padding-bottom:3px;padding:2px;font-weight:bold;background:{color:navigation bg hover};-webkit-transition: all 0.4s linear;
+-moz-transition: all 0.4s linear;
+transition: all 0.4s linear;border-radius:5px;padding-right:3px;padding-left:3px;}
+
+.audio {background-color:#000000;width:220px;}
+
+.ptitle {font-size:15px;font-weight:bold;font-family:Arial;line-height:16px;}
+
+.tumblrAutoPager_page_info, .tumblrAutoPager_page_separator {display:none;}
+
+#infscr-loading {
+position: absolute;
+bottom: 0;
+left: 25%;
+}
+
+.navigation{display:none;}
+
+blockquote {
+margin: 0px;
+padding-left: 5px;
+margin-left: 5px;
+border-left: 3px solid #000000;}
+
+
+#linksss{position:absolute !important;width:auto; height:auto; right:3px;top:26px;-webkit-filter: invert(100%) ;}
+
+{CustomCSS}#scrollToTop:link,#scrollToTop:visited { color: transparent; background-color: transparent; display: none; position: fixed; top: 15px; right: 15px;}
+    </style>
+    {block:ifrainbowlinks}
+    <script type="text/javascript" src="http://static.tumblr.com/jn17x0j/2Zvltn7mc/rainbow_links.txt
+"></script>{/block:ifrainbowlinks}
+
+    <script type='text/javascript' src='http://static.tumblr.com/d0qlne1/DiAl6ekb7/jquery-1.4.2.min.js'></script>
+
+
+    {block:IndexPage}
+    <script type="text/javascript" src="http://static.tumblr.com/dbek3sy/iBElrgjim/jquerymasonry.js"></script>
+
+    <script type="text/javascript" src="http://static.tumblr.com/dbek3sy/Qyblrgjfn/jqueryinfintescroll.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            var $content = $('.content');
+            $content.masonry({ itemSelector: '.post' }),
+                $content.infinitescroll({
+                    navSelector: '.navigation',
+                    nextSelector: '.navigation a#next',
+                    itemSelector: '.post',
+                    loading: {
+                        finishedMsg: '',
+                        img: 'http://static.tumblr.com/dbek3sy/pX1lrx8xv/ajax-loader.gif'
+                    },
+                    bufferPx: 600,
+                    debug: false,
+                },
+                    // call masonry as a callback.
+                    function (newElements) {
+                        var $newElems = $(newElements);
+                        $newElems.hide();
+                        // ensure that images load before adding to masonry layout
+                        $newElems.imagesLoaded(function () {
+                            $content.masonry('appended', $newElems, true, function () { $newElems.fadeIn(300); });
+
+
+                        });
+                    });
+        });
+    </script>
+
+    {/block:IndexPage}
+
+
 </head>
+<script src='http://static.tumblr.com/xgp678o/IdWm3lca4/infinitescrolling.txt' type='text/javascript'></script>
 <body>
-    <div class="container h-100">
-        <div class="row align-items-center justify-content-center text-center h-100">
-            <div class="card marginClass">
-                <div class="card-header corClass">
-                    <h5>Seja bem vindo ao conversor de moedas!</h5>
-                </div>
-                <div class=" card-body">
-                    <input type="text" class="w-100 form-control" name="nome" placeholder="Insira o valor em reais">
-                    <input type="text" class="w-100 form-control" name="nome" placeholder="Insira o valor em d�lares">
-                    <input type="radio" name="moeda" value="1" /><font size="2" face="Arial, Helvetica, sans-serif" color="#990000">Euro</font>
-                    <input type="radio" name="moeda" value="2" /><font size="2" face="Arial, Helvetica, sans-serif" color="#990000">USD</font>
-                    <input type="radio" name="moeda" value="3" /><font size="2" face="Arial, Helvetica, sans-serif" color="#990000">Rand</font>
-                    <input type="radio" name="moeda" value="4" /><font size="2" face="Arial, Helvetica, sans-serif" color="#990000">Yen</font>
-                    <p> </p><br>
-                    <input type="button" class="w-100 btn btn-outline-info" value="Converter" name="mostrar_mensagem" />
+    <div class="head">
+        {block:IfHeaderImage}<center><img src="{image:Header}" max-width="600"></center>
+        <div class="desc">{Description}</div>
+        <br>
+
+        <center>
+            <a href="/" class="links">home</a>&nbsp;&nbsp;&nbsp;
+            <a href="/ask" class="links">message</a>&nbsp;&nbsp;&nbsp;
+            <a href="/archive" class="links">archive</a>&nbsp;&nbsp;&nbsp;
+
+            {block:ifLink1Title}
+            <a href="{text:Link 1 URL}" class="links">{text:Link 1 Title}</a>&nbsp;&nbsp;&nbsp;
+            {/block:ifLink1Title}
+
+            {block:ifLink2Title}
+            <a href="{text:Link 2 URL}" class="links">{text:Link 2 Title}</a>&nbsp;&nbsp;&nbsp;
+            {/block:ifLink2Title}
+
+            {block:ifLink3Title}
+            <a href="{text:Link 3 URL}" class="links">{text:Link 3 Title}</a>&nbsp;&nbsp;&nbsp;
+            {/block:ifLink3Title}
+
+            {block:ifLink4Title}
+            <a href="{text:Link 4 URL}" class="links">{text:Link 4 Title}</a>&nbsp;&nbsp;&nbsp;
+            {/block:ifLink4Title}
+
+            {block:ifLink5Title}
+            <a href="{text:Link 5 URL}" class="links">{text:Link 5 Title}&nbsp;&nbsp;</a>&nbsp;
+            {/block:ifLink5Title}
+
+            <a href="http://classy-lovely.tumblr.com/" class="links">theme</a>
+        </center>
+
+
+    </div>{/block:IfHeaderImage}
+
+    {block:IfNotHeaderImage}<div class="blogtitle">{Title}</a></div>
+    <div class="desc">{Description}</div>
+    <br>
+    <center>
+        <a href="/" class="links">home</a>&nbsp;&nbsp;&nbsp;
+        <a href="/ask" class="links">message</a>&nbsp;&nbsp;&nbsp;
+        <a href="/archive" class="links">archive</a>&nbsp;&nbsp;&nbsp;
+
+        {block:ifLink1Title}
+        <a href="{text:Link 1 URL}" class="links">{text:Link 1 Title}</a>&nbsp;&nbsp;&nbsp;
+        {/block:ifLink1Title}
+
+        {block:ifLink2Title}
+        <a href="{text:Link 2 URL}" class="links">{text:Link 2 Title}</a>&nbsp;&nbsp;&nbsp;
+        {/block:ifLink2Title}
+
+        {block:ifLink3Title}
+        <a href="{text:Link 3 URL}" class="links">{text:Link 3 Title}</a>&nbsp;&nbsp;&nbsp;
+        {/block:ifLink3Title}
+
+        {block:ifLink4Title}
+        <a href="{text:Link 4 URL}" class="links">{text:Link 4 Title}</a>&nbsp;&nbsp;&nbsp;
+        {/block:ifLink4Title}
+
+        {block:ifLink5Title}
+        <a href="{text:Link 5 URL}" class="links">{text:Link 5 Title}&nbsp;&nbsp;</a>&nbsp;
+        {/block:ifLink5Title}
+
+        <a href="http://classy-lovely.tumblr.com/" class="links">theme</a>
+    </center>
+
+
+    </div>{/block:IfNotHeaderImage}
+
+
+    <script src="http://static.tumblr.com/2plu7ye/dTemfp01j/infinitescrolling.txt" type="text/javascript"></script>
+
+    {block:indexpage}<div class="navigation">{block:Pagination}{block:NextPage}<p id="page_nav"><a style="float:right" href="{NextPage}" id="next">Older</a>{/block:NextPage}{block:PreviousPage}<a style="float:left" href="{PreviousPage}">Newer</a></p>{/block:PreviousPage}{/block:Pagination}</div>{/block:indexpage}</div>
+
+    <div class="content">
+        {block:Posts}
+
+
+        {block:Text}
+        <div class="post">
+            <div class="text">
+                {block:Title}<div class="ptitle">{Title}</div>{/block:Title}{Body}{block:IndexPage}<div id="text">
+                    <a href="{Permalink}">{DayOfWeek}, {Month} {DayOfMonth}{DayOfMonthSuffix}</a>
                 </div>
             </div>
+        </div>{/block:IndexPage}{/block:Text}
+
+
+
+        {block:Photo}<div class="post">
+            {block:IndexPage}<div class="kkk">
+                <a href="{Permalink}">POSTED {TimeAgo}</a>{block:ifwhitepermalinkbackground} <font color="#000000"> / </font>
+                {/block:ifwhitepermalinkbackground}
+                {block:ifnotwhitepermalinkbackground}<font color="#ffffff"> / </font>{/block:ifnotwhitepermalinkbackground}<a href="{Permalink}">{NoteCount}</a>{block:ifnotwhitepermalinkbackground}<font color="#ffffff"> / </font>{block:ifnotwhitepermalinkbackground}{block:ifwhitepermalinkbackground} <font color="#000000"> / </font>{/block:ifwhitepermalinkbackground} <a href="{ReblogURL}">REBLOG</a>
+            </div>{/block:IndexPage}{block:IndexPage}<a href="{Permalink}">{/block:IndexPage}{block:PermalinkPage}{LinkOpenTag}{/block:PermalinkPage}<img src="{block:IndexPage}{PhotoURL-500}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-HighRes}{/block:PermalinkPage}" width="{block:indexpage}260px{/block:indexpage} {block:permalinkpage}500px{/block:permalinkpage}" alt="{PhotoAlt}" />{block:IndexPage}</a>{/block:IndexPage}{block:PermalinkPage}{LinkCloseTag}{/block:PermalinkPage}
+        </div>{/block:Photo}
+
+
+
+        {block:Photoset}
+        <div class="post">
+            <div class="photoset">
+                <div style="width:250px;overflow:hidden;height:auto;">
+                    {Photoset-250}
+                </div>{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}<div id="text">
+                    <a href="{Permalink}">{DayOfWeek}, {Month} {DayOfMonth}{DayOfMonthSuffix}</a>
+                </div>
+            </div>
+        </div>{/block:Photoset}
+
+
+        {block:Quote}
+        <div class="post">{Quote}{block:Source}<a href="{Permalink}"><b> -  {Source}</b></a>{/block:Source}</div>
+        {/block:Quote}
+
+        {block:Link}
+        <div class="post">
+            <div class="ptitle"><a href="{URL}">{Name}</a></div>{block:Description}{Description}{/block:Description}
+            {block:IndexPage}<div id="text">
+                <a href="{Permalink}">{DayOfWeek}, {Month} {DayOfMonth}{DayOfMonthSuffix}</a>
+            </div>{/block:IndexPage}
         </div>
+        {/block:Link}
+
+        {block:Chat}
+        <div class="post">
+            {block:Title}<b>{Title}</b>{/block:Title}
+            {block:Lines}{block:Label}<b>{Label}</b> {Line}<br>{/block:Label}{/block:Lines}{block:IndexPage}<div id="text">
+                <a href="{Permalink}">{DayOfWeek}, {Month} {DayOfMonth}{DayOfMonthSuffix}</a>
+            </div>{/block:IndexPage}
+        </div>
+        {/block:Chat}
+
+        {block:Video}
+        <div class="post">
+            <div class="video">
+                <div style="width:250px;overflow:hidden;height:auto;">{Video-250}</div>
+                {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}<div id="text">
+                    <a href="{Permalink}">{DayOfWeek}, {Month} {DayOfMonth}{DayOfMonthSuffix}</a>
+                </div>
+            </div>
+        </div>{/block:Video}
+
+        {block:Audio}
+        <div class="post">
+            <div class="audio">
+                {AudioPlayerBlack}
+            </div>{Caption}
+            {block:PermalinkPage}{/block:PermalinkPage}
+            {block:IndexPage}<div id="text">
+                <a href="{Permalink}">{DayOfWeek}, {Month} {DayOfMonth}{DayOfMonthSuffix}</a>
+            </div>{/block:IndexPage}
+        </div>
+        {/block:Audio}
+
+        {block:Answer}<div class="post">
+            <div class="inner">
+                <div class="question">{Question}</div><p class="asker_line">{Asker}</p><p>{Answer}</p>
+            </div>
+            {block:PermalinkPage}{/block:PermalinkPage}{block:IndexPage}<div id="text">
+                <a href="{Permalink}">{DayOfWeek}, {Month} {DayOfMonth}{DayOfMonthSuffix}</a>
+            </div>{/block:IndexPage}
+        </div>{/block:Answer}
+
+
+        {block:PermalinkPage}
+        <div id="zzz">
+            {block:Date}
+            {block:NoteCount}This post has {NoteCountWithLabel}{/block:NoteCount}<div style="margin-top:5px;"></div>
+            {block:Date}Posted {TimeAgo}{/block:Date}<div style="margin-top:5px;"></div>
+            {block:RebloggedFrom}
+            Reblogged from <a href="{ReblogParentUrl}">{ReblogParentName}</a>
+            {/block:RebloggedFrom}<div style="margin-top:5px;"></div>
+            {block:ContentSource}<a href="{SourceURL}" target="_blank">Originally posted by {SourceTitle}</a>{/block:ContentSource}<div style="margin-top:5px;"></div>
+            {block:HasTags}{block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}{/block:HasTags}<div style="margin-top:5px;"></div>
+            <blockquote>{block:caption}{caption}{/block:caption}</blockquote><div style="margin-top:5px;"></div>
+            {block:PostNotes}{PostNotes}
+            {/block:PostNotes}
+            {/block:PermalinkPage}
+
+            {/block:Posts}
+
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
 </body>
 </html>
-<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>..::Conversor de moeda com JQUERY::..</title>
-    <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var moeda, valorkwanza, cambio, resultado, valortext;
-            valorkwanza = $('input[name="valor_kwanza"]').val();
-            cambio = $('input[name="cambio"]').val();
-            valortext = $('input[name="valor"]').val();
-            moeda = $('input[type="radio"][name="moeda"]:checked').val();
-
-            $('input[name=converte]').click(function () {
-
-                if (moeda == 1) {
-                    alert("Op��o n�o activada para efeito de calculos");
-                }
-                else
-                    if (moeda == 2) {
-
-                        resultado = valorkwanza / cambio;
-                        document.conversor_moeda.valor.value = resultado;
-                    }
-                    else
-                        if (moeda == 3) {
-                            alert("Op��o n�o activada para efeito de calculos");
-                        }
-                        else
-                            if (moeda == 4) {
-                                alert("Op��o n�o activada para efeito de calculos");
-                            }
-            })
-        });
-    </script>
-    <style type="text/css">
-        #conteudo {
-            width: 450px;
-            height: 180px;
-            border: 1px solid #990000;
-        }
-
-        #valor {
-            width: 160px;
-            float: left;
-        }
-
-        fieldset {
-            width: 100px;
-        }
-
-        #converter {
-        }
-
-        #valor-convert {
-            float: left;
-            margin: 10px;
-            width: 300px;
-        }
-
-        #moedas {
-            float: left;
-        }
-
-        div label {
-            width: 100px;
-            float: left;
-        }
-
-        label {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 12px;
-            color: #990000;
-        }
-
-        legend {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
-            color: #990000;
-            font-weight: bold;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="conteudo">
-        <form action="#" name="conversor_moeda">
-            <div id="valor-cambio">
-                <div>
-                    <label>Valor em kwanza</label>
-                    <input type="text" name="valor_kwanza" size="14" />
-                </div>
-                <div>
-                    <label>Cambio </label>
-                    <input type="text" name="cambio" size="14" />
-                </div>
-            </div>
-            <div>
-                <div id="moedas">
-                    <fieldset>
-                        <legend>MOEDAS</legend>
-                        <div id="tipo-moedas">
-                            <div><input type="radio" name="moeda" value="1" /><font size="2" face="Arial, Helvetica, sans-serif" color="#990000">Euro</font></div>
-                            <div><input type="radio" name="moeda" value="2" /><font size="2" face="Arial, Helvetica, sans-serif" color="#990000">USD</font></div>
-                            <div><input type="radio" name="moeda" value="3" /><font size="2" face="Arial, Helvetica, sans-serif" color="#990000">Rand</font></div>
-                            <div><input type="radio" name="moeda" value="4" /><font size="2" face="Arial, Helvetica, sans-serif" color="#990000">Yen</font></div>
-                        </div>
-                    </fieldset>
-                </div>
-                <div id="valor-convert">
-                    <div id="valor">
-                        <label id="valor">Valor</label>
-                        <div id="valor"><input type="text" name="valor" readonly /></div>
-                        <div id="converter"><input type="button" name="converte" value="Converter" /></div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</body>
-</html>-->
